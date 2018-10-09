@@ -1,5 +1,5 @@
 # G-r-nt-l-i-lemleri-
-Görüntülü işlemi dersinde yaptimiz örnekleri
+Goruntulu islemi dersinde yaptimiz ornekleri
 
 import numpy as np
 import matplotlib.pyplot as  plt
