@@ -34,7 +34,7 @@ def matris_create_28_with_0_1(matrix_a):
   
  matris_create_28_with_0_1(m)
  
- def get_similarity(character_a, character_b):
+def get_similarity(character_a, character_b):
     m = character_a.shape[0]
     n = character_a.shape[1]
     my_similarity = 0
