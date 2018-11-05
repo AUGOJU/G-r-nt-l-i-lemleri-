@@ -21,6 +21,14 @@ spectral =  plt.imshow(img1,cmap='nipy_spectral')
 plt.colorbar(spectral)
 plt.show()
 
+plt.figure(1, figsize=(15,15))
+
+plt.subplot(121)
+plt.colorbar(plt.imshow(img1[...,0], cmap='binary'))
+
+plt.subplot(122)
+plt.colorbar(plt.imshow(img1[...,2], cmap='binary'))
+
 fig, axes = plt.subplots(2,2)
 fig.set_figwidth(10)
 fig.set_figheight(10)
@@ -41,4 +49,21 @@ ax3.set_xticks([]),ax3.set_yticks([])
 ax4.hist(img1.ravel(), bins=256, range=(0.0,1.0),fc='k')
 
 plt.suptitle('Histograms')
+plt.show()
+
+
+plt.figure(3, figsize=(10,10))
+
+plt.subplot(221)
+plt.colorbar(plt.imshow(img0))
+
+plt.subplot(222)
+plt.hist(img0.ravel(), bins=256, range=(0,255))
+
+plt.subplot(223)
+plt.colorbar(plt.imshow(img1))
+
+plt.subplot(224)
+plt.hist(img1.ravel(), bins=256, range=(0,255))
+
 plt.show()
