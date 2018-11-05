@@ -5,8 +5,8 @@ img = mpimg.imread('image/guto.jpg')
 
 def get_distance(pixel,w=[1/3,1/3,1/3]):
     r,g,b = pixel[0],pixel[1],pixel[2]
-    w0,w1,w2=w[0],w[1],w[2]
-    return ((r*2)*w0+(g*2)*w1+(b*2)*w2)*0.5
+    w0,w1,w2 = w[0],w[1],w[2]
+    return ((r**2)*w0+(g**2)*w1+(b**2)*w2)**0.5
     
 my_RGB = [1,2,3]
 gray_level = get_distance(my_RGB,[0.6,0.3,0.1])
