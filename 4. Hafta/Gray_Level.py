@@ -29,7 +29,7 @@ def convert_GRAY2BW(grayimg,threshold):
     img_bw = np.empty((m,n))
     for i in range(m):
         for j in range(n):
-            if grayimg[i,j].any() > threshold:
+            if grayimg[i,j] > threshold:
                 img_bw[i,j]=1
             else:
                 img_bw[i,j]=0
@@ -50,10 +50,10 @@ plt.xticks([]),plt.yticks([])
 
 plt.subplot(223)
 plt.xticks([]),plt.yticks([])
-plt.imshow(gray_level_img)
+plt.imshow(gray_level_img, cmap='gray')
 
 plt.subplot(224)
-plt.imshow(convert_GRAY2BW(gray_level_img,100))
+plt.imshow(convert_GRAY2BW(gray_level_img,120), cmap='gray')
 plt.xticks([]),plt.yticks([])
 
 plt.show()
