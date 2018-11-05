@@ -1,7 +1,7 @@
 import numpy as np
-import random
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import random
 
 def matris_create_28_by_28_with_0_1():
     my_matris = np.zeros((28,28))
@@ -9,7 +9,7 @@ def matris_create_28_by_28_with_0_1():
         for j in range(28):
             my_matris[i,j] = random.randint(0,1)
     return my_matris
-    
+
 m = matris_create_28_by_28_with_0_1()
 m
 
@@ -25,15 +25,15 @@ def matris_create_28_with_0_1(matrix_a):
             if(matrix_a[i,j] == 1 and x_min > i):
                 x_min = i
             if(matrix_a[i,j] == 1 and x_max < i):
-                x_nax = i
+                x_max = i
             if(matrix_a[i,j] == 1 and y_min > j):
-                x_min = i
-            if(matrix_a[i,j] == 1 and y_max > i):
-                x_min = i
+                y_min = j
+            if(matrix_a[i,j] == 1 and y_max < j):
+                y_max = j
     return (x_min, x_max, y_min, y_max)
-  
- matris_create_28_with_0_1(m)
- 
+
+matris_create_28_with_0_1(m)
+
 def get_similarity(character_a, character_b):
     m = character_a.shape[0]
     n = character_a.shape[1]
