@@ -10,6 +10,7 @@ def get_distance(pixel,w=[1/3,1/3,1/3]):
     
 my_RGB = [1,2,3]
 gray_level = get_distance(my_RGB,[0.6,0.3,0.1])
+# gray_level = get_distance(my_RGB) -> boyle de yazilabilir
 print(gray_level)
 
 def convert_RGB2GRAY(img):
